@@ -1,0 +1,69 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -317px; /* Скрыт за левой границей экрана */
+    width: 317px; /* Ширина панели по макету */
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 100;
+    transition: left 0.3s ease; /* Плавное выдвижение */
+    box-sizing: border-box;
+    padding: 16px 20px; /* Внутренние отступы для аккуратного выравнивания крестика */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 1px 2px 0px #1D21261A,
+    0px 10px 40px 0px #1D212621; /* Легкая тень для отделения от фона */
+}
+
+.sidebar.open {
+    left: 0; /* Появляется при открытии */
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4); /* Эффект затемнения страницы */
+    z-index: 99;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 28px; /* Расстояние между ссылками строго по макету */
+    margin-top: 36px;
+    /* Отступ сверху от кнопки закрытия */
+}
+
+.nav a {
+    text-decoration: none; /* Убирает стандартное подчеркивание */
+    color: #000000;
+    font-family: 'Montserrat', '-apple-system', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: #58ACFF;
+}
+
+.nav a.active {
+    color: #0059B2; /* Яркий синий цвет активного пункта как на скриншоте */
+    font-weight: 600; /* Только активная ссылка становится жирной */
+    text-decoration: underline;
+}
+
+.close {
+    align-self: flex-end; /* Сдвигает кнопку крестика вправо */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close img {
+    width: 24px; /* Компактный размер иконки закрытия по макету */
+    height: 24px;
+}

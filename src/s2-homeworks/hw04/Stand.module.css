@@ -1,0 +1,32 @@
+.stand {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+}
+
+.inputs > div,
+.buttons > div {
+    margin: 0;
+    padding: 0;
+    display: flex; /* Помогает убрать дефолтные инлайновые сдвиги */
+}

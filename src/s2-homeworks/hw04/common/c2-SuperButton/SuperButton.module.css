@@ -1,0 +1,75 @@
+.button {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 133px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 5px 24px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.default {
+    background-color: #0066CC;
+    color: #ffffff;
+}
+
+.red {
+    background-color: #CC1439;
+    color: #ffffff;
+}
+
+.secondary {
+    background-color: transparent;
+    border-color: #0066CC;
+    color: #0066cc;
+    min-width: 176px;
+}
+
+/* Эффекты при наведении */
+.default:hover {
+    background-color: #0080FF;
+
+}
+
+.red:hover {
+    background-color: #FF1A47;
+
+}
+
+.secondary:hover {
+    background-color: #E5F0FA;
+    border-color: #0066CC;
+    color: #0066cc;
+}
+
+/* Эффекты при нажатии */
+.default:active {
+    background-color: #0059B2;
+
+}
+
+.red:active {
+    background-color: #B21232;
+}
+
+.secondary:active {
+    background-color: #C9E5FF;
+}
+
+/* Состояние заблокированной кнопки */
+.disabled,
+.button:disabled {
+    background-color: #004D99;
+    color: #002E5C;
+    border-color: transparent;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity:0.5;
+}
