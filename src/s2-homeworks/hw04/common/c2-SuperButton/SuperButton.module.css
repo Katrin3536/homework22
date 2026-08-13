@@ -29,7 +29,7 @@
     background-color: transparent;
     border-color: #0066CC;
     color: #0066cc;
-    min-width: 176px;
+    width: 176px;
 }
 
 /* Эффекты при наведении */
@@ -47,6 +47,7 @@
     background-color: #E5F0FA;
     border-color: #0066CC;
     color: #0066cc;
+    width: 176px;
 }
 
 /* Эффекты при нажатии */
@@ -61,6 +62,7 @@
 
 .secondary:active {
     background-color: #C9E5FF;
+    width: 176px;
 }
 
 /* Состояние заблокированной кнопки */

@@ -1,23 +1,62 @@
-.item {
-}
-
-.item:last-of-type {
-}
-
-.users {
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0;
+    font-family: sans-serif;
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 24px;
 }
 
-.container {
+
+.users {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
 }
 
 .thead {
+    background-color: #E5E5E5;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Roboto serif;
+    width: 606px;
+    height: 36px;
+    line-height: 100%;
+}
+
+.thead td {
+    padding: 12px 16px;
+    text-align: left;
+}
+
+.item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.item:last-of-type {
+    border-bottom: none;
+}
+
+.item td {
+    padding: 16px;
+    text-align: left;
 }
 
 .nameCol {
+    width: 60%;
+    color: #000000;
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .ageCol {
+    width: 40%;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
 }
