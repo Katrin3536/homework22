@@ -18,6 +18,41 @@ html {
     color: var(--color);
 }
 
-.select {
+/* HW12.module.css */
 
+.select {
+    display: block;
+    width: 180px;            /* Фиксированная ширина селекта */
+    height: 36px;            /* Высота поля */
+    padding: 0 12px;         /* Отступы внутри селекта */
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--color);     /* Текст меняется в зависимости от темы */
+    background-color: var(--background); /* Фон меняется в зависимости от темы */
+    border: 1px solid #D9D9D9; /* Серая аккуратная рамка */
+    border-radius: 2px;      /* Легкое скругление уголков */
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Стили для текста над селектом */
+.selectSpan {
+    display: block;
+    font-size: 14px;
+    color: #4A4A4A;
+    margin: 20px 0 -10px 30px
+;
+}
+
+.hwWrapper {
+    background-color: var(--background) !important;
+    color: var(--color) !important;
+    min-height: 100vh; /* Чтобы фон растягивался вниз, если это необходимо */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавная смена темы */
+}
+
+/* Дополнительно красим заголовок, чтобы он менял цвет */
+.title {
+    color: var(--color) !important;
 }
