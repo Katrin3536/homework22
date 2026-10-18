@@ -1,0 +1,38 @@
+.sortWrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 4px;
+    user-select: none;
+}
+
+/* Базовый стиль стрелочки (создаем треугольник) */
+.icon {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Состояние ПО УМОЛЧАНИЮ (показывает серую двойную стрелочку или просто треугольник) */
+.none {
+    border-top: 5px solid #a1a1a1; /* серый цвет неактивной стрелочки */
+    transform: rotate(0deg);
+}
+
+/* Сортировка по УБЫВАНИЮ (стрелочка смотрит вниз и становится черной) */
+.down {
+    border-top: 5px solid #000000;
+    transform: rotate(0deg);
+}
+
+/* Сортировка по ВОЗРАСТАНИЮ (стрелочка разворачивается вверх и становится черной) */
+.up {
+    border-top: 5px solid #000000;
+    transform: rotate(180deg); /* переворачиваем треугольник вверх */
+}
+
+

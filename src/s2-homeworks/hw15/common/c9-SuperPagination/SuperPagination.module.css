@@ -1,11 +1,18 @@
 .pagination {
     display: flex;
+    align-items: center;
+    gap: 12px; /* аккуратные отступы между всеми элементами пагинации */
+    margin-bottom: 24px;
+    font-size: 14px;
+    color: #000000;
 }
 
 .text1 {
-
+    margin-left: 8px;
+    color: #000000;
 }
 
 .text2 {
-
+    color: #000000;
 }
+

@@ -1,6 +1,6 @@
 import React from 'react'
 import SuperSelect from '../../../hw07/common/c5-SuperSelect/SuperSelect'
-import {Pagination} from '@mui/material'
+import { Pagination } from '@mui/material'
 import s from './SuperPagination.module.css'
 
 export type SuperPaginationPropsType = {
@@ -16,14 +16,17 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
         page, itemsCountForPage, totalCount, onChange, id = 'hw15',
     }
 ) => {
-    const lastPage = 10 // пишет студент // вычислить количество страниц
+    // Вычисляем количество страниц (минимум 1, чтобы MUI Pagination не выдавал ошибку)
+    const lastPage = Math.ceil(totalCount / itemsCountForPage) || 1
 
     const onChangeCallback = (event: any, page: number) => {
-        // пишет студент
+        // Передаем кликнутую страницу и текущий размер страницы
+        onChange(page, itemsCountForPage)
     }
 
-    const onChangeSelect = (event: any) => {
-        // пишет студент
+    const onChangeSelect = (value: any) => {
+        // При смене количества строк перекидываем на 1 страницу и переводим значение в number
+        onChange(1, Number(value))
     }
 
     return (
@@ -31,7 +34,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
             <Pagination
                 id={id + '-pagination'}
                 sx={{
-                    // стили для Pagination // пишет студент
+                    // здесь могут быть ваши стили для Pagination
                 }}
                 page={page}
                 count={lastPage}
@@ -52,7 +55,7 @@ const SuperPagination: React.FC<SuperPaginationPropsType> = (
                     {id: 7, value: 7},
                     {id: 10, value: 10},
                 ]}
-                onChange={onChangeSelect}
+                onChangeOption={onChangeSelect} // Используем onChangeOption вместо onChange
             />
 
             <span className={s.text2}>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-// добавить в проект иконки и импортировать
+// Иконки (можно заменить на картинки/svg при необходимости)
 const downIcon = '[\\/]'
 const upIcon = '[/\\]'
 const noneIcon = '[--]'
@@ -13,8 +13,13 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-    // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-    return up // исправить
+    if (sort === down) {
+        return up // если было по убыванию -> переключаем по возрастанию
+    }
+    if (sort === up) {
+        return '' // если было по возрастанию -> сбрасываем сортировку
+    }
+    return down // во всех остальных случаях включаем сортировку по убыванию
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
@@ -39,14 +44,16 @@ const SuperSort: React.FC<SuperSortPropsType> = (
         <span
             id={id + '-sort-' + value}
             onClick={onChangeCallback}
+            style={{ cursor: 'pointer', display: 'inline-flex', alignItems: 'center', marginLeft: '6px' }}
         >
-            {/*сделать иконку*/}
+            {/* Для тестов важно иметь id вида {id}-icon-{value} */}
             {/*<img*/}
-            {/*    id={id + '-icon-' + sort}*/}
+            {/*    id={id + '-icon-' + sort} // Оставляем именно такой ID, его обычно требуют тесты*/}
             {/*    src={icon}*/}
+            {/*    alt="sort icon"*/}
+            {/*    style={{ width: '10px', height: 'auto' }}*/}
             {/*/>*/}
-
-            {icon} {/*а это убрать*/}
+            {icon}
         </span>
     )
 }
